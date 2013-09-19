@@ -1007,7 +1007,9 @@
 			overlay.css('height', $(document).height());
 		}
 
-		$.fancybox.center(true);
+        if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent))) {
+		    $.fancybox.center(true);
+        }
 	};
 
 	$.fancybox.center = function() {
